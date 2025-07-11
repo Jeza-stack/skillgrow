@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkillGrow - Your ultimate resource for developing essential soft skills including communication, leadership, emotional intelligence, and more.">
+    <meta name="keywords" content="soft skills, communication, leadership, emotional intelligence, time management, teamwork, professional development">
+    <meta name="author" content="SkillGrow Team">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SkillGrow - Master Your Soft Skills">
+    <meta property="og:description" content="Develop essential soft skills for career success with expert insights and practical tips.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skillgrow.com">
+    <meta property="og:image" content="assets/images/hero-bg.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SkillGrow - Master Your Soft Skills">
+    <meta name="twitter:description" content="Develop essential soft skills for career success with expert insights and practical tips.">
+    <meta name="twitter:image" content="assets/images/hero-bg.jpg">
+    
+    <title>SkillGrow - Master Your Soft Skills for Career Success</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="SkillGrow Logo" class="logo-img">
+                    </a>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/category.html?cat=communication" class="dropdown-link">Communication Skills</a></li>
+                            <li><a href="pages/category.html?cat=leadership" class="dropdown-link">Leadership</a></li>
+                            <li><a href="pages/category.html?cat=emotional-intelligence" class="dropdown-link">Emotional Intelligence</a></li>
+                            <li><a href="pages/category.html?cat=time-management" class="dropdown-link">Time Management</a></li>
+                            <li><a href="pages/category.html?cat=teamwork" class="dropdown-link">Teamwork</a></li>
+                            <li><a href="pages/category.html?cat=problem-solving" class="dropdown-link">Problem Solving</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Search and CTA -->
+                <div class="nav-actions">
+                    <button class="search-btn" id="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="#newsletter" class="cta-btn">Subscribe</a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search articles..." id="search-input">
+                <button class="search-close" id="search-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-background">
+                <img src="assets/images/hero-bg.jpg" alt="Professional team collaboration" class="hero-bg-img">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="container">
+                    <h1 class="hero-title">Master Your Soft Skills for Career Success</h1>
+                    <p class="hero-subtitle">Develop essential communication, leadership, and emotional intelligence skills with expert insights and practical strategies.</p>
+                    <div class="hero-actions">
+                        <a href="pages/blog.html" class="btn btn-primary">Explore Articles</a>
+                        <a href="#newsletter" class="btn btn-secondary">Get Free Tips</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Posts Section -->
+        <section class="featured-posts" id="featured-posts">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Articles</h2>
+                    <p class="section-subtitle">Discover our most popular and impactful soft skills content</p>
+                </div>
+                <div class="posts-grid" id="featured-posts-grid">
+                    <!-- Featured posts will be dynamically loaded here -->
+                </div>
+                <div class="section-footer">
+                    <a href="pages/blog.html" class="btn btn-outline">View All Articles</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Explore by Category</h2>
+                    <p class="section-subtitle">Find the soft skills that matter most to your career growth</p>
+                </div>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="category-title">Communication Skills</h3>
+                        <p class="category-description">Master the art of effective communication in professional settings.</p>
+                        <a href="pages/category.html?cat=communication" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="category-title">Leadership</h3>
+                        <p class="category-description">Develop leadership qualities that inspire and motivate teams.</p>
+                        <a href="pages/category.html?cat=leadership" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="category-title">Emotional Intelligence</h3>
+                        <p class="category-description">Build emotional awareness and empathy for better relationships.</p>
+                        <a href="pages/category.html?cat=emotional-intelligence" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="category-title">Time Management</h3>
+                        <p class="category-description">Learn strategies to maximize productivity and work-life balance.</p>
+                        <a href="pages/category.html?cat=time-management" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="category-title">Teamwork</h3>
+                        <p class="category-description">Enhance collaboration and build stronger team dynamics.</p>
+                        <a href="pages/category.html?cat=teamwork" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="category-title">Problem Solving</h3>
+                        <p class="category-description">Develop critical thinking and creative problem-solving abilities.</p>
+                        <a href="pages/category.html?cat=problem-solving" class="category-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter" id="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2 class="newsletter-title">Stay Updated with Latest Insights</h2>
+                        <p class="newsletter-subtitle">Get weekly tips and strategies delivered to your inbox. Join thousands of professionals improving their soft skills.</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="Enter your email address" required id="newsletter-email">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        <p class="form-note">No spam. Unsubscribe anytime.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="SkillGrow Logo" class="logo-img">
+                        <p class="footer-description">Empowering professionals to develop essential soft skills for career success and personal growth.</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="pages/category.html?cat=communication">Communication</a></li>
+                        <li><a href="pages/category.html?cat=leadership">Leadership</a></li>
+                        <li><a href="pages/category.html?cat=emotional-intelligence">Emotional Intelligence</a></li>
+                        <li><a href="pages/category.html?cat=teamwork">Teamwork</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Connect</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 SkillGrow. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/blog-data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/seo.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>
+

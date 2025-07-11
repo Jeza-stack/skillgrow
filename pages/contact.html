@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with the SkillGrow team. We'd love to hear from you and answer any questions about soft skills development.">
+    <meta name="keywords" content="contact skillgrow, soft skills questions, professional development support">
+    <meta name="author" content="SkillGrow Team">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Us - SkillGrow">
+    <meta property="og:description" content="Get in touch with the SkillGrow team for questions about soft skills development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <title>Contact Us - SkillGrow | Get in Touch</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="SkillGrow Logo" class="logo-img">
+                    </a>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="category.html?cat=communication" class="dropdown-link">Communication Skills</a></li>
+                            <li><a href="category.html?cat=leadership" class="dropdown-link">Leadership</a></li>
+                            <li><a href="category.html?cat=emotional-intelligence" class="dropdown-link">Emotional Intelligence</a></li>
+                            <li><a href="category.html?cat=time-management" class="dropdown-link">Time Management</a></li>
+                            <li><a href="category.html?cat=teamwork" class="dropdown-link">Teamwork</a></li>
+                            <li><a href="category.html?cat=problem-solving" class="dropdown-link">Problem Solving</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Search and CTA -->
+                <div class="nav-actions">
+                    <button class="search-btn" id="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="../index.html#newsletter" class="cta-btn">Subscribe</a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search articles..." id="search-input">
+                <button class="search-close" id="search-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <!-- Page Header -->
+        <section class="contact-header">
+            <div class="container">
+                <div class="contact-header-content">
+                    <h1 class="contact-title">Get in Touch</h1>
+                    <p class="contact-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-layout">
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <div class="form-header">
+                            <h2 class="form-title">Send us a Message</h2>
+                            <p class="form-description">
+                                Have a question about soft skills development? Want to suggest a topic for our blog? 
+                                Or just want to say hello? We're here to help!
+                            </p>
+                        </div>
+                        
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-name">Full Name *</label>
+                                    <input type="text" id="contact-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email">Email Address *</label>
+                                    <input type="email" id="contact-email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-company">Company/Organization</label>
+                                    <input type="text" id="contact-company" name="company">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-subject">Subject *</label>
+                                    <select id="contact-subject" name="subject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="article-suggestion">Article Suggestion</option>
+                                        <option value="collaboration">Collaboration</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="technical">Technical Support</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-message">Message *</label>
+                                <textarea id="contact-message" name="message" rows="6" required placeholder="Tell us more about your inquiry..."></textarea>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="contact-newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for the latest soft skills insights
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn" id="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i> Sending...
+                                </span>
+                            </button>
+                        </form>
+                        
+                        <!-- Success Message -->
+                        <div class="success-message" id="success-message" style="display: none;">
+                            <div class="success-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info-section">
+                        <div class="contact-info-card">
+                            <h3 class="info-title">Contact Information</h3>
+                            <p class="info-description">
+                                Reach out to us through any of these channels. We're here to support your professional growth journey.
+                            </p>
+                            
+                            <div class="contact-methods">
+                                <div class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <h4>Email</h4>
+                                        <p>hello@skillgrow.com</p>
+                                        <span class="method-note">We respond within 24 hours</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <h4>Response Time</h4>
+                                        <p>24 hours or less</p>
+                                        <span class="method-note">Monday to Friday</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <h4>Location</h4>
+                                        <p>Global Remote Team</p>
+                                        <span class="method-note">Serving worldwide</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Section -->
+                        <div class="faq-section">
+                            <h3 class="faq-title">Frequently Asked Questions</h3>
+                            <div class="faq-list">
+                                <div class="faq-item">
+                                    <button class="faq-question" type="button">
+                                        <span>How often do you publish new articles?</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>We publish new articles weekly, covering various aspects of soft skills development. Subscribe to our newsletter to stay updated!</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" type="button">
+                                        <span>Can I suggest topics for articles?</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Absolutely! We love hearing from our readers. Use the contact form above and select "Article Suggestion" as the subject.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" type="button">
+                                        <span>Do you offer corporate training?</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Yes, we offer customized soft skills training for organizations. Contact us with "Collaboration" as the subject to discuss your needs.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" type="button">
+                                        <span>Is your content free to access?</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Yes, all our blog content is completely free. Our mission is to make soft skills development accessible to everyone.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="social-section">
+                            <h3 class="social-title">Follow Us</h3>
+                            <p class="social-description">Stay connected for daily tips and insights</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2 class="newsletter-title">Stay Updated</h2>
+                        <p class="newsletter-description">
+                            Get weekly insights on soft skills development delivered straight to your inbox. 
+                            Join thousands of professionals who are already growing their careers with our content.
+                        </p>
+                    </div>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="newsletter-input-group">
+                            <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                            <button type="submit" class="newsletter-btn">Subscribe</button>
+                        </div>
+                        <p class="newsletter-privacy">
+                            We respect your privacy. Unsubscribe at any time.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo.png" alt="SkillGrow Logo" class="logo-img">
+                        <p class="footer-description">Empowering professionals to develop essential soft skills for career success and personal growth.</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="category.html?cat=communication">Communication</a></li>
+                        <li><a href="category.html?cat=leadership">Leadership</a></li>
+                        <li><a href="category.html?cat=emotional-intelligence">Emotional Intelligence</a></li>
+                        <li><a href="category.html?cat=teamwork">Teamwork</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Connect</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 SkillGrow. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>
+

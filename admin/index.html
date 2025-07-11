@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkillGrow CMS - Content Management System for managing blog posts and content.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <title>SkillGrow CMS - Admin Dashboard</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Quill Rich Text Editor -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="cms.css">
+</head>
+<body>
+    <!-- CMS Header -->
+    <header class="cms-header">
+        <div class="cms-header-content">
+            <div class="cms-logo">
+                <img src="../assets/images/logo.png" alt="SkillGrow" class="logo-img">
+                <span class="cms-title">SkillGrow CMS</span>
+            </div>
+            <div class="cms-actions">
+                <button class="cms-btn cms-btn-secondary" id="preview-site">
+                    <i class="fas fa-eye"></i> Preview Site
+                </button>
+                <button class="cms-btn cms-btn-primary" id="save-all">
+                    <i class="fas fa-save"></i> Save All
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CMS Main Content -->
+    <main class="cms-main">
+        <!-- Sidebar -->
+        <aside class="cms-sidebar">
+            <nav class="cms-nav">
+                <ul class="cms-nav-list">
+                    <li class="cms-nav-item">
+                        <a href="#dashboard" class="cms-nav-link active" data-section="dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="cms-nav-item">
+                        <a href="#posts" class="cms-nav-link" data-section="posts">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Blog Posts</span>
+                        </a>
+                    </li>
+                    <li class="cms-nav-item">
+                        <a href="#new-post" class="cms-nav-link" data-section="new-post">
+                            <i class="fas fa-plus"></i>
+                            <span>New Post</span>
+                        </a>
+                    </li>
+                    <li class="cms-nav-item">
+                        <a href="#categories" class="cms-nav-link" data-section="categories">
+                            <i class="fas fa-tags"></i>
+                            <span>Categories</span>
+                        </a>
+                    </li>
+                    <li class="cms-nav-item">
+                        <a href="#media" class="cms-nav-link" data-section="media">
+                            <i class="fas fa-images"></i>
+                            <span>Media</span>
+                        </a>
+                    </li>
+                    <li class="cms-nav-item">
+                        <a href="#settings" class="cms-nav-link" data-section="settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Content Area -->
+        <div class="cms-content">
+            <!-- Dashboard Section -->
+            <section class="cms-section active" id="dashboard-section">
+                <div class="cms-section-header">
+                    <h1 class="cms-section-title">Dashboard</h1>
+                    <p class="cms-section-subtitle">Welcome to your SkillGrow CMS dashboard</p>
+                </div>
+                
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="total-posts">0</div>
+                            <div class="stat-label">Total Posts</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="published-posts">0</div>
+                            <div class="stat-label">Published</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="draft-posts">0</div>
+                            <div class="stat-label">Drafts</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="total-categories">6</div>
+                            <div class="stat-label">Categories</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-content">
+                    <div class="dashboard-section">
+                        <h2>Recent Posts</h2>
+                        <div class="recent-posts" id="recent-posts">
+                            <!-- Recent posts will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-section">
+                        <h2>Quick Actions</h2>
+                        <div class="quick-actions">
+                            <button class="action-btn" onclick="showSection('new-post')">
+                                <i class="fas fa-plus"></i>
+                                Create New Post
+                            </button>
+                            <button class="action-btn" onclick="showSection('posts')">
+                                <i class="fas fa-list"></i>
+                                Manage Posts
+                            </button>
+                            <button class="action-btn" onclick="exportData()">
+                                <i class="fas fa-download"></i>
+                                Export Data
+                            </button>
+                            <button class="action-btn" onclick="importData()">
+                                <i class="fas fa-upload"></i>
+                                Import Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Posts Section -->
+            <section class="cms-section" id="posts-section">
+                <div class="cms-section-header">
+                    <h1 class="cms-section-title">Blog Posts</h1>
+                    <div class="section-actions">
+                        <button class="cms-btn cms-btn-primary" onclick="showSection('new-post')">
+                            <i class="fas fa-plus"></i> New Post
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="posts-filters">
+                    <div class="filter-group">
+                        <label for="status-filter">Status:</label>
+                        <select id="status-filter" class="cms-select">
+                            <option value="all">All Posts</option>
+                            <option value="published">Published</option>
+                            <option value="draft">Drafts</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="category-filter">Category:</label>
+                        <select id="category-filter" class="cms-select">
+                            <option value="all">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <input type="text" id="search-posts" class="cms-input" placeholder="Search posts...">
+                    </div>
+                </div>
+
+                <div class="posts-table-container">
+                    <table class="posts-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="posts-table-body">
+                            <!-- Posts will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- New/Edit Post Section -->
+            <section class="cms-section" id="new-post-section">
+                <div class="cms-section-header">
+                    <h1 class="cms-section-title" id="post-form-title">Create New Post</h1>
+                    <div class="section-actions">
+                        <button class="cms-btn cms-btn-secondary" id="save-draft">
+                            <i class="fas fa-save"></i> Save Draft
+                        </button>
+                        <button class="cms-btn cms-btn-primary" id="publish-post">
+                            <i class="fas fa-eye"></i> Publish
+                        </button>
+                    </div>
+                </div>
+
+                <form class="post-form" id="post-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="post-title">Title *</label>
+                            <input type="text" id="post-title" name="title" class="cms-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="post-slug">Slug</label>
+                            <input type="text" id="post-slug" name="slug" class="cms-input">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="post-category">Category *</label>
+                            <select id="post-category" name="category" class="cms-select" required>
+                                <option value="">Select Category</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="post-author">Author</label>
+                            <input type="text" id="post-author" name="author" class="cms-input" value="SkillGrow Team">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="post-excerpt">Excerpt</label>
+                        <textarea id="post-excerpt" name="excerpt" class="cms-textarea" rows="3" placeholder="Brief description of the post..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="post-image">Featured Image URL</label>
+                        <input type="url" id="post-image" name="image" class="cms-input" placeholder="assets/images/...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="post-tags">Tags (comma-separated)</label>
+                        <input type="text" id="post-tags" name="tags" class="cms-input" placeholder="tag1, tag2, tag3">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Content *</label>
+                        <div id="post-content-editor" class="editor-container">
+                            <!-- Quill editor will be initialized here -->
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="post-featured" name="featured">
+                                <span class="checkmark"></span>
+                                Featured Post
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="post-status">Status</label>
+                            <select id="post-status" name="status" class="cms-select">
+                                <option value="draft">Draft</option>
+                                <option value="published">Published</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <input type="hidden" id="post-id" name="id">
+                    <input type="hidden" id="post-date" name="date">
+                </form>
+            </section>
+
+            <!-- Categories Section -->
+            <section class="cms-section" id="categories-section">
+                <div class="cms-section-header">
+                    <h1 class="cms-section-title">Categories</h1>
+                    <p class="cms-section-subtitle">Manage blog post categories</p>
+                </div>
+
+                <div class="categories-grid" id="categories-grid">
+                    <!-- Categories will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Media Section -->
+            <section class="cms-section" id="media-section">
+                <div class="cms-section-header">
+                    <h1 class="cms-section-title">Media Library</h1>
+                    <div class="section-actions">
+                        <button class="cms-btn cms-btn-primary" id="upload-media">
+                            <i class="fas fa-upload"></i> Upload Media
+                        </button>
+                    </div>
+                </div>
+
+                <div class="media-grid" id="media-grid">
+                    <!-- Media files will be loaded here -->
+                </div>
+
+                <input type="file" id="media-upload-input" accept="image/*" multiple style="display: none;">
+            </section>
+
+            <!-- Settings Section -->
+            <section class="cms-section" id="settings-section">
+                <div class="cms-section-header">
+                    <h1 class="cms-section-title">Settings</h1>
+                    <p class="cms-section-subtitle">Configure your blog settings</p>
+                </div>
+
+                <div class="settings-content">
+                    <div class="settings-section">
+                        <h2>Site Information</h2>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label for="site-title">Site Title</label>
+                                <input type="text" id="site-title" class="cms-input" value="SkillGrow">
+                            </div>
+                            <div class="form-group">
+                                <label for="site-description">Site Description</label>
+                                <textarea id="site-description" class="cms-textarea" rows="3">Empowering professionals to develop essential soft skills for career success and personal growth.</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="site-url">Site URL</label>
+                                <input type="url" id="site-url" class="cms-input" value="https://skillgrow.com">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="settings-section">
+                        <h2>Data Management</h2>
+                        <div class="data-actions">
+                            <button class="cms-btn cms-btn-secondary" onclick="exportData()">
+                                <i class="fas fa-download"></i> Export All Data
+                            </button>
+                            <button class="cms-btn cms-btn-secondary" onclick="importData()">
+                                <i class="fas fa-upload"></i> Import Data
+                            </button>
+                            <button class="cms-btn cms-btn-danger" onclick="clearAllData()">
+                                <i class="fas fa-trash"></i> Clear All Data
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h2>About This CMS</h2>
+                        <p>SkillGrow CMS is a client-side content management system that stores data locally in your browser. Your content is automatically saved as you work.</p>
+                        <p><strong>Version:</strong> 1.0.0</p>
+                        <p><strong>Storage:</strong> Browser Local Storage</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal" id="confirm-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Confirm Action</h3>
+                <button class="modal-close" onclick="closeModal('confirm-modal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="confirm-message">Are you sure you want to perform this action?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="cms-btn cms-btn-secondary" onclick="closeModal('confirm-modal')">Cancel</button>
+                <button class="cms-btn cms-btn-danger" id="confirm-action">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- File input for import -->
+    <input type="file" id="import-file-input" accept=".json" style="display: none;">
+
+    <!-- Scripts -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="../js/blog-data.js"></script>
+    <script src="cms.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore articles in this category to develop your soft skills and advance your career.">
+    <meta name="keywords" content="soft skills, professional development, career growth">
+    <meta name="author" content="SkillGrow Team">
+    
+    <!-- Open Graph Meta Tags (will be updated dynamically) -->
+    <meta property="og:title" content="Category - SkillGrow">
+    <meta property="og:description" content="Explore articles in this category.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <title id="page-title">Category - SkillGrow</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/category.css">
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="SkillGrow Logo" class="logo-img">
+                    </a>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="category.html?cat=communication" class="dropdown-link">Communication Skills</a></li>
+                            <li><a href="category.html?cat=leadership" class="dropdown-link">Leadership</a></li>
+                            <li><a href="category.html?cat=emotional-intelligence" class="dropdown-link">Emotional Intelligence</a></li>
+                            <li><a href="category.html?cat=time-management" class="dropdown-link">Time Management</a></li>
+                            <li><a href="category.html?cat=teamwork" class="dropdown-link">Teamwork</a></li>
+                            <li><a href="category.html?cat=problem-solving" class="dropdown-link">Problem Solving</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Search and CTA -->
+                <div class="nav-actions">
+                    <button class="search-btn" id="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="../index.html#newsletter" class="cta-btn">Subscribe</a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search articles..." id="search-input">
+                <button class="search-close" id="search-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <!-- Breadcrumb -->
+        <section class="breadcrumb-section">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <a href="blog.html">Blog</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current" id="breadcrumb-current">Loading...</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Category Header -->
+        <section class="category-header">
+            <div class="container">
+                <div class="category-header-content">
+                    <div class="category-icon-wrapper">
+                        <div class="category-icon" id="category-icon">
+                            <i class="fas fa-folder"></i>
+                        </div>
+                    </div>
+                    <h1 class="category-title" id="category-title">Loading...</h1>
+                    <p class="category-description" id="category-description">Loading...</p>
+                    <div class="category-stats">
+                        <span class="post-count" id="post-count">0 articles</span>
+                        <span class="category-separator">•</span>
+                        <span class="last-updated" id="last-updated">Last updated: Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Content -->
+        <section class="category-content">
+            <div class="container">
+                <div class="category-layout">
+                    <!-- Sidebar -->
+                    <aside class="category-sidebar">
+                        <!-- Search Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Search in Category</h3>
+                            <div class="search-widget">
+                                <input type="text" class="search-widget-input" placeholder="Search..." id="category-search">
+                                <button class="search-widget-btn" id="category-search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Other Categories Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Other Categories</h3>
+                            <div class="other-categories" id="other-categories">
+                                <!-- Other categories will be loaded dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Featured Posts Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Featured Articles</h3>
+                            <div class="featured-posts-widget" id="featured-posts-widget">
+                                <!-- Featured posts will be loaded dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Newsletter Signup -->
+                        <div class="sidebar-widget newsletter-widget">
+                            <h3 class="widget-title">Stay Updated</h3>
+                            <p>Get the latest insights delivered to your inbox.</p>
+                            <form class="newsletter-form" id="sidebar-newsletter-form">
+                                <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                                <button type="submit" class="newsletter-btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </aside>
+
+                    <!-- Main Category Area -->
+                    <div class="category-main">
+                        <!-- Sort Options -->
+                        <div class="sort-bar">
+                            <div class="sort-info">
+                                <span id="results-count">Loading...</span>
+                            </div>
+                            <div class="sort-options">
+                                <label for="category-sort-select">Sort by:</label>
+                                <select class="sort-select" id="category-sort-select">
+                                    <option value="newest">Newest First</option>
+                                    <option value="oldest">Oldest First</option>
+                                    <option value="title">Title A-Z</option>
+                                    <option value="popular">Most Popular</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Posts Grid -->
+                        <div class="posts-container">
+                            <div class="posts-grid" id="category-posts-grid">
+                                <!-- Posts will be loaded dynamically -->
+                            </div>
+                            
+                            <!-- Loading State -->
+                            <div class="loading-state" id="loading-state" style="display: none;">
+                                <div class="loading-spinner"></div>
+                                <p>Loading articles...</p>
+                            </div>
+                            
+                            <!-- No Results State -->
+                            <div class="no-results" id="no-results" style="display: none;">
+                                <i class="fas fa-search"></i>
+                                <h3>No articles found</h3>
+                                <p>Try adjusting your search terms or explore other categories.</p>
+                                <a href="blog.html" class="btn btn-primary">View All Articles</a>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination-container" id="pagination-container">
+                            <!-- Pagination will be loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Categories Section -->
+        <section class="related-categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Explore Other Topics</h2>
+                    <p class="section-subtitle">Discover more areas to develop your soft skills</p>
+                </div>
+                <div class="related-categories-grid" id="related-categories-grid">
+                    <!-- Related categories will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo.png" alt="SkillGrow Logo" class="logo-img">
+                        <p class="footer-description">Empowering professionals to develop essential soft skills for career success and personal growth.</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="category.html?cat=communication">Communication</a></li>
+                        <li><a href="category.html?cat=leadership">Leadership</a></li>
+                        <li><a href="category.html?cat=emotional-intelligence">Emotional Intelligence</a></li>
+                        <li><a href="category.html?cat=teamwork">Teamwork</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Connect</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 SkillGrow. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/blog-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/category.js"></script>
+</body>
+</html>
+
